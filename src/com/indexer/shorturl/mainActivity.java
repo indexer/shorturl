@@ -16,6 +16,7 @@ public class mainActivity extends Activity {
      */
 
      String orignalurl;
+    String shorturl;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +33,11 @@ public class mainActivity extends Activity {
 
                 TextView txtshorturl = (TextView)findViewById(R.id.txturlshortcut);
                 try {
-                    String shorturl = tinyurl.urlShort(orignalurl);
+                     shorturl = tinyurl.urlShort(orignalurl);
                 } catch (IOException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 }
-                txtshorturl.getText();
+                txtshorturl.setText(shorturl);
 
 
                 //To change body of implemented methods use File | Settings | File Templates.
